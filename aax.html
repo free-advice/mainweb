@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free Advice</title>
+    <style>
+        body {
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+            overflow: hidden; /* Hide overflow to prevent scrollbars */
+        }
+
+        /* Style the text element */
+        #text {
+            position: absolute; /* Position relative to the screen */
+            top: 25%; /* Move text to 1/4 down the page */
+            left: 94px; /* Align text to the left side of the screen */
+            font-size: 1.0em; /* Adjust font size for visibility */
+            color: black; /* Text color */
+            z-index: 2; /* Place text above the canvas */
+        }
+
+        #text a {
+            display: block; /* Make each link a block element to stack them vertically */
+            margin-bottom: 5px; /* Add spacing between the links */
+        }
+
+        /* Style the canvas to cover the entire screen */
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: transparent; /* Set a transparent background color for the canvas */
+            z-index: 1; /* Set a lower z-index to keep the canvas below other elements */
+        }
+    </style>
+</head>
+<body>
+    <!-- Text element -->
+    <p id="text">
+        <a href="index.html">Back</a>
+        
+         <a href="A001.html">[A001] Poet laureate, Requisit - Shades (Single)</a>
+         
+
+        
+    </p>
+
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free Advice</title>
+    <style>
+        body {
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+            overflow: hidden; /* Hide overflow to prevent scrollbars */
+        }
+
+        /* Style the text element */
+        #text {
+            position: absolute; /* Position relative to the screen */
+            top: 25%; /* Move text to 1/4 down the page */
+            left: 10px; /* Align text to the left side of the screen */
+            font-size: 1.0em; /* Adjust font size for visibility */
+            color: black; /* Text color */
+            z-index: 2; /* Place text above the canvas */
+        }
+
+        #text a {
+            display: block; /* Make each link a block element to stack them vertically */
+            margin-bottom: 5px; /* Add spacing between the links */
+        }
+
+        /* Style the specific links to be inline */
+        #text .inline-links {
+            display: flex;
+            gap: 10px; /* Add spacing between the links */
+        }
+
+        /* Style the canvas to cover the entire screen */
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: transparent; /* Set a transparent background color for the canvas */
+            z-index: 1; /* Set a lower z-index to keep the canvas below other elements */
+        }
+
+        #album-cover {
+            position: fixed; /* Fixed position for the album cover */
+            top: 25vh; /* Align with the text vertically */
+            left: 500px; /* Place it to the right of the text */
+            width: 300px; /* Set width for the album cover */
+            height: auto; /* Maintain aspect ratio */
+            z-index: 1; /* Place it below the text */
+        }
+    </style>
+</head>
+<body>
+    <!-- Text element -->
+    <p id="text">
+        <a href="freeadvice.html">Back</a>
+    
+        <a> [FA029] Requisit - Pilot (EP)</a>
+        <a>New York Death (4:42)</a>
+        <a>Thanks Yaz (3:49)</a>
+
+        <a>Wells Fargo Art (1:32)</a>
+        <a>Only (1:48)</a>
+        <a>You Are (2:58)</a>
+        <a>Thanks Yaz (3:49)</a>
+        <a>Untitled 6 (1:51)</a>
+        <a>Pilot (feat. Ella 00) (2:38)</a>
+    
+
+
+
+        <span class="inline-links">
+            <a href="https://open.spotify.com/album/4W1sC09zPWX3MrumJbMjiJ">Spotify</a>
+            <a href="https://music.apple.com/us/album/pilot-ep/1716033454">Apple</a>
+            <a href="https://requisit.bandcamp.com/album/pilot-ep">Bandcamp</a>
+        </span>
+    </p>
+
+    <!-- Album cover -->
+    <img id="album-cover" src="img/freeadvice/FA029.jpg" alt="Album Cover">
+</body>
+</html>
+
+

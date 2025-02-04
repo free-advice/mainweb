@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free Advice</title>
+    <style>
+        body {
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+            overflow: hidden; /* Prevent scrollbars on the body */
+        }
+
+        /* Style the text element */
+        #text {
+            position: absolute; /* Position relative to the screen */
+            top: 27%; /* Align the text to 1/4 down the page */
+            left: 10px; /* Align text to the left side of the screen */
+            font-size: 1.0em; /* Adjust font size for visibility */
+            color: black; /* Text color */
+            z-index: 2; /* Place text above other elements */
+            overflow-y: auto; /* Enable vertical scrolling */
+            height: 60%; /* Set height to match the original alignment */
+        }
+
+        #text a {
+            display: block; /* Make each link a block element to stack them vertically */
+            margin-bottom: 5px; /* Add spacing between the links */
+        }
+
+        /* Style the specific links to be inline */
+        #text .inline-links {
+            display: flex;
+            gap: 10px; /* Add spacing between the links */
+        }
+
+        /* Style the album cover */
+        #album-cover {
+            position: fixed; /* Fixed position for the album cover */
+            top: 25%; /* Align with the text vertically */
+            left: 500px; /* Place it to the right of the text */
+            width: 300px; /* Set width for the album cover */
+            height: auto; /* Maintain aspect ratio */
+            z-index: 1; /* Place it below the text */
+        }
+    </style>
+</head>
+<body>
+    <!-- Text element -->
+    <div id="text">
+        <a href="freeadvice.html">Back</a>
+    
+        <a> [FA028] Psn15 - Since My Soul Got a Seat Up In The Kingdom (Album) </a>
+
+        <a>Banquet (4:29)</a>
+        <a>Feds (1:06)</a>
+        <a>Chunk (3:13)</a>
+
+        <a>Infantry Sequences (3:32)</a>
+        <a>Get Poor Quick (2:51)</a>
+        <a>Gradually (4:21)</a>
+
+        <a>Traction (2:17)</a>
+        <a>Strawberrymouth (2:29)</a>
+        <a>Looks (3:35)</a>
+
+        <a>Picture (2:34)</a>
+         <a>NFT (3:14)</a>
+         <a>Lukashenko (2:14)</a>
+
+         <a>Drose (3:00)</a>
+         <a>Shadowstate (1:09)</a>
+         <a>Boystar (4:45)</a>
+
+         <a>Suitors (3:57)</a>
+         <a>Fred (2:20)</a>
+          <a>Beatback (2:13)</a>
+
+          <a>Strung (2:24)</a>
+         <a>Think of You (3:21)</a>
+          <a>Sherlock (3:18)</a>
+
+          <a>Metadata (4:15)</a>
+         <a>Alkaline (2:50)</a>
+         <a>Loverboy (2:19)</a>
+
+          <a>Since My Soul Got a Seat Up In The Kingdom (3:31)</a>
+          <a>Sun Wav (3:29)</a>
+          <a>Everyday (2:41)</a>
+
+          <a>Dvorak (2:57)</a>
+         <a>Gary Payton OG (3:58)</a>
+      
+        <span class="inline-links">
+            <a href="https://open.spotify.com/album/6AWYpF79DO8jN7KrisM6bi">Spotify</a>
+            <a href="https://music.apple.com/us/album/since-my-soul-got-a-seat-up-in-the-kingdom/1715767602">Apple</a>
+            <a href="https://psn15.bandcamp.com/album/since-my-soul-got-a-seat-up-in-the-kingdom">Bandcamp</a>
+        </span>
+    </div>
+
+    <!-- Album cover -->
+    <img id="album-cover" src="img/freeadvice/FA028.jpg" alt="Album Cover">
+</body>
+</html>

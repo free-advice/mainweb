@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Free Advice</title>
+    <style>
+        body {
+            margin: 0; /* Reset default margin */
+            padding: 0; /* Reset default padding */
+            overflow: hidden; /* Hide overflow to prevent scrollbars */
+        }
+
+        /* Style the text element */
+        #text {
+            position: absolute; /* Position relative to the screen */
+            top: 25%; /* Move text to 1/4 down the page */
+            left: 10px; /* Align text to the left side of the screen */
+            font-size: 1.0em; /* Adjust font size for visibility */
+            color: black; /* Text color */
+            z-index: 2; /* Place text above the canvas */
+        }
+
+        /* Style the canvas to cover the entire screen */
+        #canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: transparent; /* Set a transparent background color for the canvas */
+            z-index: 1; /* Set a lower z-index to keep the canvas below other elements */
+        }
+    </style>
+</head>
+<body>
+    <!-- Text element -->
+    <p id="text">
+        <a href="freeadvice.html">Free Advice</a>, 
+        <a href="index.html">AAX</a>,
+        contact: info@freeadvice.xyz
+
+    </p>
+
+    <!-- Drawing canvas -->
+    <canvas id="canvas"></canvas>
+    <script>
+        let canvas = document.getElementById('canvas');
+        let ctx = canvas.getContext('2d');
+        let isDrawing = false;
+        let lastX = 0;
+        let lastY = 0;
+
+        function updateCanvasDimensions() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        window.addEventListener('resize', updateCanvasDimensions);
+        updateCanvasDimensions();
+
+        canvas.addEventListener('mousedown', (e) => {
+            isDrawing = true;
+            lastX = e.offsetX;
+            lastY = e.offsetY;
+        });
+
+        canvas.addEventListener('mousemove', draw);
+        canvas.addEventListener('mouseup', () => isDrawing = false);
+        canvas.addEventListener('mouseout', () => isDrawing = false);
+
+        function draw(e) {
+            if (!isDrawing) return;
+            const x = e.offsetX;
+            const y = e.offsetY;
+            ctx.beginPath();
+            ctx.moveTo(lastX, lastY);
+            ctx.lineTo(x, y);
+            ctx.strokeStyle = 'lightgrey'; // Set the stroke color to light grey
+            ctx.lineWidth = 1; // Set the line width to 1 pixel
+            ctx.stroke();
+            lastX = x;
+            lastY = y;
+        }
+    </script>
+</body>
+</html>
+
+
+
